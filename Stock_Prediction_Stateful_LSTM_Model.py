@@ -117,7 +117,7 @@ class rnn_lstm(object):
                 model_lstm.add(Dropout(self.paras.model['dropout'][idx]))
 
         # output layer
-        model_lstm.add(Dense(units=1, output_dim=self.paras.model['out_layer']))
+        model_lstm.add(Dense(output_dim=self.paras.model['out_layer']))
         model_lstm.add(Activation(self.paras.model['out_activation']))
         model_lstm.compile(loss=self.paras.model['loss'], optimizer=self.paras.model['optimizer'])
         print('build LSTM model...')
