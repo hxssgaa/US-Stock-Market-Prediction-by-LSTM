@@ -236,6 +236,7 @@ class rnn_lstm_regression(rnn_lstm):
 
         # build LSTM model
         model_lstm = self.build_LSTM_model()
+        print('build complete, start training')
 
         # first train LSTM model
         #earlyStopping = keras.callbacks.EarlyStopping(monitor='loss', patience=0, verbose=0, mode='auto')
